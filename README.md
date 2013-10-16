@@ -9,12 +9,16 @@ it in the appropriate place in the code. Version 1 of the API is now deprecated 
 obtain a new key if you don't already have one. In this case you will need to modify the source code to use 
 version 2 of the Google maps API.
 
+The app requires a SQL server with PHP scripts to store and serve the location data and carry out the Google Cloud
+Messaging (GCM) communications. The PHP scripts and database schemas can be found in the Server Docs folder. In the Android
+code, references to the locations of our php scripts have been removed and replaced with your-server-goes-here.com. 
+Replace this with the address of your server.
+
 You will need some GCM codes too - a sender ID for your app which should be inserted in RegisterThread.java. 
-The individual GCM codes for each user will besaved in shared preferences on the devices, 
+The individual GCM codes for each user will be saved in shared preferences on the devices, 
 and uploaded to the SQL database on your server so you don't need to know what these are.
 
 
-The app requires a SQL server with PHP scripts to store and serve the location data and carry out the Google Cloud
-Messaging (GCM) communications. The PHP scripts and database schemas can be found in the Server Docs folder.
+
 
 
