@@ -5,7 +5,7 @@ A location sharing app for Android. Share your location with selected contacts, 
 
 This software uses version 1 of the Google maps API. This requires a Google Maps key otherwise the map will
 not be rendered properly on the screen (it will just show as a grey background). If you have a map key, enter 
-it in the appropriate place in the code (LocationActivity.java). Version 1 of the API is now deprecated so you 
+it in the appropriate place in the code (res/layout/location.xml). Version 1 of the API is now deprecated so you 
 will not be able to obtain a new key if you don't already have one. In this case you will need to modify the source code to use version 2 of the Google maps API. To set up your Android project, make sure that you are using the Google API build target (e.g. in Eclipse right click the project package -> Properties -> Android,  select Google APIs).
 
 The app requires a SQL server with PHP scripts to store and serve the location data and carry out the Google Cloud
