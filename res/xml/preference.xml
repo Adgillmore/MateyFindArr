@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+                android:title="Settings">
+                <ListPreference
+                    android:title="Location Frequency"
+                    android:summary="How often to retrieve location data" 
+                	android:key="listPref"
+                	android:entries="@array/locationUpdateFrequency"
+                	android:entryValues="@array/frequencyMilliseconds"/>
+                <!--  <ListPreference
+                    android:title="Other User' Location Frequency"
+                    android:summary="How often to retrieve other users' location data" 
+                	android:key="otherListPref"
+                	android:entries="@array/locationUpdateFrequency"
+                	android:entryValues="@array/frequencyMilliseconds"/> -->
+        </PreferenceCategory>
+</PreferenceScreen>

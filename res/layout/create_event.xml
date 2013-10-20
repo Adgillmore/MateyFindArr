@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:gravity="center_horizontal"
+        android:background="@drawable/map">
+
+        <TextView
+            android:id="@+id/createEventTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:text="@string/CrE"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:typeface="sans" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10dp" >
+            
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black" 
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/eventTitle"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:hint="@string/TitleHint" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal" >
+            
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="Desc"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/eventDesc"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Description"
+                android:lines="3"
+                android:maxLines="3"
+                android:minLines="2"
+                android:scrollbars="vertical"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/invitedFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="20dp"
+                android:hint="Invite Friends..."
+                android:textAppearance="?android:attr/textAppearanceMedium" 
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/selectFriends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SelectFriends" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp" >
+            
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="@string/Start"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/startDate"
+                android:background="@color/white"
+                android:layout_width="70dp"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/startTime"
+                android:background="@color/white"
+                android:layout_width="70dp"
+                android:paddingLeft="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Time"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:text="@string/End"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/endDate"
+                android:background="@color/white"
+                android:layout_width="70dp"
+                android:paddingLeft="5dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Date"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/grey" />
+
+            <TextView
+                android:id="@+id/endTime"
+                android:layout_width="70dp"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingLeft="5dp"
+                android:hint="@string/Time"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/boundaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                android:text="@string/addBoundary" />
+            
+            <Button
+                android:id="@+id/buttonHelp"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/help" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/createEventButton"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/CrE"
+            android:textSize="20sp" 
+            android:layout_marginBottom="40dp"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="co880.CAA"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="10" />
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="co880.CAA" />
+    
+    <permission android:name="co880.CAA.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCOUNT_MANAGER"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="co880.CAA.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+	<!-- App receives GCM messages. -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<!-- Keeps the processor from sleeping when a message is received. -->
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:theme="@android:style/Theme.NoTitleBar"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <uses-library android:name="com.google.android.maps" />
+        <uses-library android:name="android.test.runner" />
+        
+        <service 
+            android:name=".Model.LocationService" 
+            android:screenOrientation="portrait"/>
+        <activity 
+            android:name=".Activities.PrefActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.LocationActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.MyEvents" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.CreateEvent" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.FriendManagerActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.ProfileActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.RegisterUserActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.SetBoundaryActivity" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity 
+            android:name=".Activities.EditEvent" 
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".Activities.CAAActivity"
+            android:label="@string/app_name" 
+            android:screenOrientation="portrait" 
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+      	<receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" >
+  			<intent-filter>
+    			<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+    			<action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+    			<category android:name="co880.CAA" />
+ 			</intent-filter>
+ 		 </receiver>
+ 		 <receiver android:name=".LocationServiceBroadcastReceiver">
+ 		     <intent-filter>
+    			<action android:name="co880.CAA.NEW_LOCATION" />
+ 			</intent-filter>
+ 		 </receiver>
+ 		<service android:name=".GCMIntentService" />		
+    </application>
+ 
+</manifest>

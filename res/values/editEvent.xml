@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="editEvent">
+        <item >Description</item>
+        <item >Invited Attendees</item>
+        <item >Edit Event</item>
+        <item >Delete Event</item>
+    </string-array>
+    
+</resources>
