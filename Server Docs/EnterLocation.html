@@ -1,0 +1,46 @@
+
+<html>
+<head>
+<title>Enter Location</title>
+</head>
+<body>
+<h2>Add a user</h2>
+
+<form action="addUser.php" method="post">
+			<p>gmail: <input type="text" name="gmail" /></p>
+			<p><input type="submit" /></p>
+</form>
+
+<h2>Enter Location</h2>
+<form action="addLocation.php" method="post">
+			<p>Gmail: <input type="text" name="gmail" /></p>
+			<p>Latitude: <input type="text" name="latitude" /></p>
+			<p>Longitude: <input type="text" name="longitude" /></p>
+                        <p>Timestamp: <input type="text" name="timestamp" /></p>
+			<p><input type="submit" /></p>
+</form>
+
+<h2>Get users</h2>
+	<a href="getUsers.php"><input type="submit" /></a>
+
+<h2>Delete user session</h2>
+<form action="deleteUserSession.php" method="post">
+	<p>Gmail: <input type="text" name="gmail" /></p>
+	<input type="submit" /></p>
+	</form>
+	
+<h2>Delete user</h2>
+<form action="deleteUser.php" method="post">
+	<p>Gmail: <input type="text" name="gmail" /></p>
+	<input type="submit" /></p>
+	</form>
+
+<h2>Get Users' Locations</h2>
+<form action="getUsersLocations.php" method="post">
+			<p>Gmail: <input type="text" name="user0" /></p>
+<p>Gmail: <input type="text" name="user1" /></p>
+<p>Gmail: <input type="text" name="user2" /></p>
+			<p><input type="submit" /></p>
+</form>
+</body>
+</html>
